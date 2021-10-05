@@ -18,7 +18,7 @@ public class MainMenu extends JMenuBar {
         this.frame = frame;
         add(createFigureMenu());
         add(createInvisibleLinesMenu());
-        add(createLightMenu());
+        //add(createLightMenu());
         add(createProjectionMenu());
     }
 
@@ -48,7 +48,7 @@ public class MainMenu extends JMenuBar {
         return invisibleLinesMenu;
     }
 
-    private JMenu createLightMenu() {
+    /*private JMenu createLightMenu() {
         JMenu lightMenu = new JMenu("Light");
         JRadioButtonMenuItem on = new JRadioButtonMenuItem("On");
         on.addActionListener(new LightMenuActionAdapter(frame, true));
@@ -66,7 +66,7 @@ public class MainMenu extends JMenuBar {
         changeLight.addActionListener(createChangeLightActionListener());
         lightMenu.add(changeLight);
         return lightMenu;
-    }
+    }*/
 
     private JMenu createProjectionMenu() {
         JMenu projectionsMenu = new JMenu("Projections");
@@ -89,7 +89,7 @@ public class MainMenu extends JMenuBar {
         buttonGroup.add(oYZ);
         projectionsMenu.add(oYZ);
 
-        projectionsMenu.add(new JSeparator());
+        /*projectionsMenu.add(new JSeparator());
         JRadioButtonMenuItem axonometric = new JRadioButtonMenuItem("Axonometric");
         axonometric.addActionListener(new ProjectionsActionAdapter(frame, (byte) 3));
         buttonGroup.add(axonometric);
@@ -103,7 +103,7 @@ public class MainMenu extends JMenuBar {
         JRadioButtonMenuItem perspective = new JRadioButtonMenuItem("Perspective");
         perspective.addActionListener(new ProjectionsActionAdapter(frame, (byte) 5));
         buttonGroup.add(perspective);
-        projectionsMenu.add(perspective);
+        projectionsMenu.add(perspective);*/
 
         oXY.setSelected(true);
         return projectionsMenu;
